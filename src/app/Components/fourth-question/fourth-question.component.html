@@ -1,0 +1,59 @@
+<div
+  style="
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(222, 240, 247);
+  "
+>
+  <div
+    style="
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    "
+  >
+    <mat-card>
+      <app-first-component [sendData]="Value"></app-first-component>
+    </mat-card>
+    <mat-card>
+      <app-second-component [sendData]="Value"></app-second-component>
+    </mat-card>
+  </div>
+  <div
+    style="
+      height: 150px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <mat-card>
+      <app-fifth-component (iteamName)="addItem($event)"></app-fifth-component>
+    </mat-card>
+  </div>
+  <div
+    style="
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    "
+  >
+    <mat-card>
+      <app-third-component [sendData]="Value"></app-third-component>
+    </mat-card>
+    <mat-card>
+      <app-fourth-component [sendData]="Value"></app-fourth-component>
+    </mat-card>
+  </div>
+</div>

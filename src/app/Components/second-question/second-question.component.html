@@ -1,0 +1,23 @@
+<div style="height: fit-content;">
+  <div>
+    <button mat-raised-button color="primary" (click)="addComponents()">
+      Add X Component
+    </button>
+  </div>
+  <div
+    *ngFor="let com of userComponets; let i = index"
+    style="margin-left: 10%"
+  >
+    <app-xcomponent [componentCount]="i"></app-xcomponent>
+  </div>
+  <div style="margin-top: 10%">
+    <button (click)="getJson()" mat-raised-button color="primary">
+      Show Json
+    </button>
+  </div>
+  <div *ngIf="showJson">
+    <mat-card >
+      <h3>{{ JsonObject | json }}</h3>
+    </mat-card>
+  </div>
+</div>

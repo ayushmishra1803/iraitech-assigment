@@ -1,0 +1,6 @@
+<button mat-raised-button color="warn" (click)="addYComponents()">
+  Add Y Components
+</button>
+<div *ngFor="let comp of ycomponents; let i = index">
+  <app-ycomponent [mainComponet]="componentCount"></app-ycomponent>
+</div>
